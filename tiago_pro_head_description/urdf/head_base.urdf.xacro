@@ -29,7 +29,7 @@
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
             <mesh
-            filename="package://tiago_pro_head_description/meshes/base_link.STL" />
+            filename="package://tiago_pro_head_description/meshes/base_link_collision.stl" />
         </geometry>
         </collision>
         </link>
@@ -53,7 +53,7 @@
         <collision>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>
-                <mesh filename="package://tiago_pro_head_description/meshes/head_base_link.STL" />
+                <mesh filename="package://tiago_pro_head_description/meshes/head_base_link_collision.STL" />
             </geometry>
         </collision>
         </link>
