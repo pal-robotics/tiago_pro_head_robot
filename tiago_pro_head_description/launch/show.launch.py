@@ -23,6 +23,7 @@ from launch_ros.substitutions import FindPackageShare
 from launch_pal.include_utils import include_scoped_launch_py_description
 from launch_pal.arg_utils import LaunchArgumentsBase
 from launch_pal.robot_arguments import CommonArgs
+from tiago_pro_head_description.launch_arguments import TiagoProHeadArgs
 
 from dataclasses import dataclass
 
@@ -31,6 +32,7 @@ from dataclasses import dataclass
 class LaunchArguments(LaunchArgumentsBase):
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     namespace: DeclareLaunchArgument = CommonArgs.namespace
+    camera_model: DeclareLaunchArgument = TiagoProHeadArgs.camera_model
 
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
@@ -39,7 +41,8 @@ def declare_actions(launch_description: LaunchDescription, launch_args: LaunchAr
         pkg_name='tiago_pro_head_description',
         paths=['launch', 'robot_state_publisher.launch.py'],
         launch_arguments={"namespace": launch_args.namespace,
-                          "use_sim_time": launch_args.use_sim_time
+                          "use_sim_time": launch_args.use_sim_time,
+                          "camera_model": launch_args.camera_model,
                           })
 
     launch_description.add_action(robot_state_publisher)
