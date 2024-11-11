@@ -15,9 +15,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import GroupAction
 from launch.actions import DeclareLaunchArgument
-from launch_pal.include_utils import include_scoped_launch_py_description
 from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch_pal.arg_utils import LaunchArgumentsBase
 from launch_pal.robot_arguments import CommonArgs
@@ -34,25 +32,12 @@ class LaunchArguments(LaunchArgumentsBase):
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
 
-    pkg_share_folder = get_package_share_directory(
-        'tiago_pro_head_controller_configuration')
-
-    # Joint state broadcaster
-    joint_state_broadcaster = GroupAction(
-        [generate_load_controller_launch_description(
-            controller_name='joint_state_broadcaster',
-            controller_params_file=os.path.join(
-                pkg_share_folder,
-                'config', 'joint_state_broadcaster.yaml'))
-         ],
-        forwarding=False)
-
-    launch_description.add_action(joint_state_broadcaster)
-
     # Head controller
-    head_controller = include_scoped_launch_py_description(
-        pkg_name="tiago_pro_head_controller_configuration",
-        paths=["launch", "head_controller.launch.py"])
+    head_controller = generate_load_controller_launch_description(
+        controller_name='head_controller',
+        controller_params_file=os.path.join(
+            get_package_share_directory('tiago_pro_head_controller_configuration'),
+            'config', 'head_controller.yaml'))
 
     launch_description.add_action(head_controller)
 
