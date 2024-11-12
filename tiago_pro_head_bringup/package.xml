@@ -3,7 +3,7 @@
 <package format="3">
   <name>tiago_pro_head_bringup</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>The tiago_pro_head_bringup package</description>
   <maintainer email="aina.irisarri@pal-robotics.com">Aina Irisarri</maintainer>
   <license>Apache License 2.0</license>
 
