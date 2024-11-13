@@ -19,7 +19,7 @@
     <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.ros2_control.xacro" />
 
     <xacro:unless value="$(arg use_sim_time)">
-      <ros2_control name="ros2_control_allegro_hand_system" type="system">
+      <ros2_control name="ros2_control_tiago_pro_head_system" type="system">
         <hardware>
           <plugin>robot_control/RobotControl</plugin>
         </hardware>
@@ -28,7 +28,7 @@
     </xacro:unless>
 
     <xacro:if value="$(arg use_sim_time)">
-      <ros2_control name="ros2_control_tiago_pro_head_system" type="system">
+      <ros2_control name="ros2_control_gazebo_system" type="system">
         <hardware>
           <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
