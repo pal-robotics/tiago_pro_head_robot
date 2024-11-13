@@ -16,6 +16,13 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
     <xacro:macro name="tiago_pro_head_base">
         <link name="base_link">
+        <inertial>
+            <origin xyz="0.00110975357790618 -8.60892376169405E-05 0.0747909538589444" rpy="0 0 0" />
+            <mass value="1.29631752086684" />
+            <inertia ixx="0.00493590257336928" ixy="-5.75640744380783E-05" ixz="0.000268460515456378"
+                iyy="0.00874689522512829" iyz="1.68556095053599E-05"
+                izz="0.0110057824631146" />
+        </inertial>
         <visual>
             <origin xyz="0 0 0" rpy="0 0 0" />
             <geometry>

@@ -1,0 +1,3 @@
+play_motion2:
+  launch: "tiago_pro_bringup tiago_pro_play_motion2.launch.py
+           robot_name:=@robot_type@"
