@@ -18,9 +18,11 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="tiago_pro_head">
   <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.urdf.xacro" />
 
+  <xacro:arg name="camera_model" default="realsense-d435"/>
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_public_sim" default="false"/>
 
+  <xacro:property name="camera_model" value="$(arg camera_model)" />
   <xacro:property name="use_sim_time" value="$(arg use_sim_time)" />
   <xacro:property name="is_public_sim" value="$(arg is_public_sim)" />
     <!-- ROS 2 Control -->
@@ -30,6 +32,6 @@
   <xacro:include filename="$(find tiago_pro_head_description)/urdf/head_base.urdf.xacro" />
 
   <xacro:tiago_pro_head_base/>
-  <xacro:tiago_pro_head name="head" parent="head_base_link" use_sim_time="$(arg use_sim_time)"/>
+  <xacro:tiago_pro_head name="head" parent="head_base_link" use_sim_time="$(arg use_sim_time)" camera_model="$(arg camera_model)"/>
 
 </robot>

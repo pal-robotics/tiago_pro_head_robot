@@ -30,7 +30,7 @@
 
   <xacro:property name="head_eps" value="${0.07}" />
 
-  <xacro:macro name="tiago_pro_head" params="name parent use_sim_time:=^|false">
+  <xacro:macro name="tiago_pro_head" params="name parent camera_model use_sim_time:=^|false">
 
     <!-- Head Link 1-->
     <link name="${name}_1_link">
@@ -129,11 +129,14 @@
       <implicitSpringDamper>1</implicitSpringDamper>
     </gazebo>
 
-    <!-- Head camera:Intel D435 -->
-    <xacro:sensor_d435 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
-      <origin xyz="-0.0416 0.1555 0" rpy="1.5708 0 3.1416" />
-    </xacro:sensor_d435>
+    <!-- Cameras-->
 
+    <!-- Head camera:Intel D435 -->
+    <xacro:if value="${camera_model == 'realsense-d435'}">
+      <xacro:sensor_d435 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
+        <origin xyz="-0.0416 0.1555 0" rpy="1.5708 0 3.1416" />
+      </xacro:sensor_d435>
+    </xacro:if>
 
   </xacro:macro>
 
