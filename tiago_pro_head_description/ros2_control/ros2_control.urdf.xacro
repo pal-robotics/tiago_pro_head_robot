@@ -30,7 +30,7 @@
     <xacro:if value="$(arg use_sim_time)">
       <gazebo>
         <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-          <parameters>$(find tiago_pro_description)/ros2_control/gazebo_controller_manager_cfg.yaml</parameters>
+          <parameters>$(find tiago_pro_head_description)/ros2_control/gazebo_controller_manager_cfg.yaml</parameters>
         </plugin>
       </gazebo>
       <ros2_control name="ros2_control_head_gazebo_system" type="system">
