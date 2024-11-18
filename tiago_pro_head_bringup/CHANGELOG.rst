@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2024-11-18)
+------------------
 * fix model on package.xml
 * Remove pm2_msgs dependendency
 * Add pm2_msgs dependency

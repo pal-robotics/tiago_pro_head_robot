@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2024-11-18)
+------------------
 * Add condition for cameras in urdf
 * Fix path for ros2 controller gazebo cfg file
 * Add gazebo plugin in ros2_control
