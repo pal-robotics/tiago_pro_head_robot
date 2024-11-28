@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix definition of pm2 module to tiago_pro_head
+* Contributors: Aina
+
 0.0.1 (2024-11-18)
 ------------------
 * fix model on package.xml

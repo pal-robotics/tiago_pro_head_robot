@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix module for default controllers
+* Contributors: Aina
+
 0.0.1 (2024-11-18)
 ------------------
 * Remove files from local_joint control used for gravity compensation
