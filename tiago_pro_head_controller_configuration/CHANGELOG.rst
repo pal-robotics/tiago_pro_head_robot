@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update module priority
+* Contributors: Aina
+
 0.0.2 (2024-11-28)
 ------------------
 * Fix module for default controllers
