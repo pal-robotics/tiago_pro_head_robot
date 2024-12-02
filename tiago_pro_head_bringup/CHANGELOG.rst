@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add prefix to pm2 module
+* Contributors: Aina
+
 1.1.0 (2024-12-02)
 ------------------
 
