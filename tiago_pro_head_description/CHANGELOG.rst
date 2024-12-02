@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Rotate sellion link
+* Contributors: Aina
+
 1.0.0 (2024-11-29)
 ------------------
 * Update module priority

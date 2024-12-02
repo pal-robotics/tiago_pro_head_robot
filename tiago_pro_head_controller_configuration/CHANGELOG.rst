@@ -2,6 +2,9 @@
 Changelog for package tiago_pro_head_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.0.0 (2024-11-29)
 ------------------
 * Update module priority
