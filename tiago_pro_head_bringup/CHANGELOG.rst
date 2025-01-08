@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove unused robot_name argument
+* Contributors: Noel Jimenez
+
 1.2.0 (2024-12-02)
 ------------------
 * Add prefix to pm2 module
