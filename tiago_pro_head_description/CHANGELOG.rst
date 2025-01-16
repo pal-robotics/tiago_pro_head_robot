@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.0 (2025-01-16)
+------------------
 * Merge branch 'tpe/simplify-3d-model' into 'humble-devel'
   Add simplyfied models
   See merge request robots/tiago_pro_head_robot!13
