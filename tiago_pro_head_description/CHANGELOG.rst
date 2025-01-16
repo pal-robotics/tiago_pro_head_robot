@@ -2,6 +2,15 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'tpe/simplify-3d-model' into 'humble-devel'
+  Add simplyfied models
+  See merge request robots/tiago_pro_head_robot!13
+* revert collision mesh
+* Add simplyfied models
+* Contributors: thomas.peyrucain, thomaspeyrucain
+
 1.3.0 (2025-01-08)
 ------------------
 
