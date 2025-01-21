@@ -29,9 +29,40 @@
   <xacro:include filename="$(find tiago_pro_head_description)/ros2_control/ros2_control.urdf.xacro" />
   <xacro:tiago_pro_head_ros2_control/>
 
-  <xacro:include filename="$(find tiago_pro_head_description)/urdf/head_base.urdf.xacro" />
+  <link name="world"/>
 
-  <xacro:tiago_pro_head_base/>
+  <joint name="head_base_joint" type="fixed">
+      <origin xyz="0 0 1.0" rpy="0 0 0" />
+      <parent link="world" />
+      <child link="head_base_link" />
+  </joint>
+
+  <link name="head_base_link">
+    <inertial>
+      <origin xyz="-0.01043 0.03314 -0.07485" rpy="0 0 0" />
+      <mass value="2.86228" />
+      <inertia ixx="0.02768" ixy="-0.00010" ixz="-0.00007"
+          iyy="0.01744" iyz="0.00170"
+          izz="0.03518" />
+    </inertial>
+    <visual>
+        <origin xyz="0 0 -0.13584" rpy="0 0 0" />
+        <geometry>
+            <mesh filename="package://tiago_pro_head_description/meshes/head_base_link.stl" />
+        </geometry>
+        <material name="">
+            <color rgba="1 1 1 1" />
+        </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.13584" rpy="0 0 0" />
+      <geometry>
+          <mesh
+          filename="package://tiago_pro_head_description/meshes/head_base_link_collision.stl" />
+      </geometry>
+    </collision>
+  </link>
+
   <xacro:tiago_pro_head name="head" parent="head_base_link" use_sim_time="$(arg use_sim_time)" camera_model="$(arg camera_model)"/>
 
 </robot>
