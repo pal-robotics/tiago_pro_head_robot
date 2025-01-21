@@ -28,7 +28,7 @@
   <xacro:property name="head_2_lower_limit" value="-1.0472"/>
   <xacro:property name="head_2_upper_limit" value="0.34907"/>
 
-  <xacro:property name="head_eps" value="${0.07}" />
+  <xacro:property name="head_eps" value="${0.15}" />
 
   <xacro:macro name="tiago_pro_head" params="name parent camera_model use_sim_time:=^|false">
 
