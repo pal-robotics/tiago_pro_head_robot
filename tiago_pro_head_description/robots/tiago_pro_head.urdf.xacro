@@ -33,7 +33,6 @@
 
   <joint name="head_base_joint" type="fixed">
       <origin xyz="0 0 0" rpy="0 0 0" />
-      <!-- <origin xyz="2.40654 -3.4 0.659997" rpy="0 0 ${-90 * deg_to_rad}" /> -->
       <parent link="world" />
       <child link="base_link" />
   </joint>
