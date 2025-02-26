@@ -17,6 +17,8 @@
 
   <!--File includes-->
   <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
+  <xacro:include filename="$(find realsense2_description)/urdf/_d455.urdf.xacro" />
+
   <!-- Tools -->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
   <!--Constant parameters-->
@@ -71,12 +73,21 @@
     <!-- Head link 2-->
     <link name="${name}_2_link">
       <inertial>
-        <origin xyz="-0.00875103486217405 0.114127350051331 -0.000389070804431699"  rpy="0 0 0" />
-        <mass value="0.846359357446667" />
-        <inertia ixx="0.00623850186261437" ixy="-0.000550112126953165" ixz="-9.403405403969E-06"
-          iyy="0.0050320204467172" iyz="-5.68886635279132E-06"
-          izz="0.0024981099013485" />
+        <origin xyz="0.01201 -0.10656 -0.00075"  rpy="0 0 0" />
+        <mass value="1.32153" />
+        <inertia ixx="0.01065" ixy="-0.00119" ixz="0.00001"
+          iyy="0.00878" iyz="-0.00003"
+          izz="0.00627" />
       </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry>
+          <mesh filename="package://tiago_pro_head_description/meshes/${camera_model}_cover_link.stl" />
+        </geometry>
+        <material name="">
+          <color rgba="1 1 1 1" />
+        </material>
+      </visual>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
@@ -95,7 +106,7 @@
     </link>
 
     <joint name="head_2_joint" type="revolute">
-      <origin xyz="0.0425 0 0.10585" rpy="1.5708 0 -3.1416" />
+      <origin xyz="0.0425 0 0.10585" rpy="-1.5708 0 0" />
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
       <axis xyz="0 0 -1" />
@@ -104,11 +115,37 @@
       <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${head_2_lower_limit + head_eps}" soft_upper_limit="${head_2_upper_limit - head_eps}" />
     </joint>
 
-    <link name="${name}_screen_link"/>
+    <link name="${name}_screen_link">
+      <visual>
+        <origin rpy="${90.0 * deg_to_rad} 0 ${90.0 * deg_to_rad}" xyz="0 0 0"/>
+        <geometry>
+          <box size="0.17282 0.10824 0.005"/>
+        </geometry>
+        <material name="">
+          <color rgba="0 0 0 1" />
+        </material>
+      </visual>
+    </link>
+
+    <gazebo reference="${name}_screen_link">
+      <visual>
+        <plugin name="${name}_video_stream" filename="libgazebo_ros_video.so">
+          <ros>
+            <!-- Add a namespace -->
+            <namespace></namespace>
+            <!-- remap image subscribe topic -->
+            <remapping>~/image_raw:=robot_face/image_raw</remapping>
+          </ros>
+          <height>480</height>
+          <width>640</width>
+        </plugin>
+      </visual>
+    </gazebo>
+
     <joint name="${name}_screen_joint" type="fixed">
       <parent link="${name}_2_link" />
       <child link="${name}_screen_link" />
-      <origin xyz="0.0528 0.08 0.0" rpy="${-90.0 * deg_to_rad} 0 0" />
+      <origin xyz="0.05584 -0.083935 0.0" rpy="1.5708 0 0" />
     </joint>
 
     <gazebo reference="${name}_1_link">
@@ -134,8 +171,15 @@
     <!-- Head camera:Intel D435 -->
     <xacro:if value="${camera_model == 'realsense-d435'}">
       <xacro:sensor_d435 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
-        <origin xyz="-0.0416 0.1555 0" rpy="1.5708 0 3.1416" />
+        <origin xyz="0.0416 -0.1555 0" rpy="1.5708 0 0" />
       </xacro:sensor_d435>
+    </xacro:if>
+
+    <!-- Head camera:Intel D455 -->
+    <xacro:if value="${camera_model == 'realsense-d455'}">
+      <xacro:sensor_d455 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
+        <origin xyz="0.040453 -0.1565 0" rpy="1.5708 0 0" />
+      </xacro:sensor_d455>
     </xacro:if>
 
   </xacro:macro>
@@ -144,7 +188,7 @@
   <link name="sellion_link"/>
 
   <joint name="sellion_joint" type="fixed">
-    <origin xyz="-0.04 0.09205 0" rpy="${-90 * deg_to_rad} ${180 * deg_to_rad} 0"/>
+    <origin xyz="0.04 -0.09205 0" rpy="1.5708 0 0"/>
     <child link="sellion_link" />
     <parent link="head_2_link"/>
   </joint>
