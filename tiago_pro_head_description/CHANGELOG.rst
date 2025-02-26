@@ -2,6 +2,19 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Put back old eps because this should be fixed for heads after the first one
+* Add Realsense D455 to tiago pro head
+* Update tiago_pro_head.urdf.xacro
+* Fix head_2_link oriontation
+* Fix and reduce collision meshhes
+* Fix screen link + base_link + update link_2 position stl
+* Increase the safety factor due to the cable getting compressed at joint limits
+* Remove unecessary link + fix base_link inertia + update collision meshes + add new head_base_link meshes
+* Add libgazebo_ros_video plugin to TIAGo Pro Head
+* Contributors: thomas.peyrucain, thomaspeyrucain
+
 1.4.0 (2025-01-16)
 ------------------
 * Merge branch 'tpe/simplify-3d-model' into 'humble-devel'
