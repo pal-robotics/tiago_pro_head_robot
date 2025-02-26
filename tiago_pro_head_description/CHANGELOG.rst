@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.1 (2025-02-26)
+------------------
 * Put back old eps because this should be fixed for heads after the first one
 * Add Realsense D455 to tiago pro head
 * Update tiago_pro_head.urdf.xacro
