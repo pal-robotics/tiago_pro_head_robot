@@ -2,6 +2,9 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.4.1 (2025-02-26)
 ------------------
 * Put back old eps because this should be fixed for heads after the first one
