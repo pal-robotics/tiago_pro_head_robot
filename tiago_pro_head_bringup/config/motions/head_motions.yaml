@@ -33,10 +33,14 @@
 
       head_shake:
         joints: [head_1_joint, head_2_joint]
-        times_from_start: [0.1, 0.8, 1.6]
-        positions: [0.0,  0.0, 
-                    0.0, -0.3, 
-                    0.0,  0.0,]
+        times_from_start: [0.1, 0.8, 1.5, 2.2, 2.9, 3.6, 4.3]
+        positions: [0.0, 0.0, 
+                   -0.4, 0.0, 
+                    0.0, 0.0,
+                    0.4, 0.0, 
+                    0.0, 0.0, 
+                   -0.4, 0.0, 
+                    0.0, 0.0]
         meta:
           name: Head Shake
           usage: demo
@@ -58,14 +62,12 @@
       head_tour:
         joints: [head_1_joint, head_2_joint]
         positions: [0.0, 0.0,
-                    0.7, 0.0,
-                    0.7, 0.3,
-                    0.7, -0.3,
-                    0.7, 0.3,
-                    -0.7, 0.3,
-                    -0.7, -0.3,
+                    0.7, 0.4,
+                    0.7,-0.4,
+                   -0.7,-0.4,
+                   -0.7, 0.4,
                     0.0, 0.0]
-        times_from_start: [0.1, 3.0, 6.0, 9.0, 12.0, 15.0, 18.0, 21.0]
+        times_from_start: [0.1, 3.0, 6.0, 9.0, 12.0, 15.0]
         meta:
           name: Head Tour
           usage: demo
