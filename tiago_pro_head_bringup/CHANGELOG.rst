@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.4.2 (2025-03-25)
+------------------
 * Merge branch 'mvi/update-motions' into 'humble-devel'
   let the head shake instead of nod
   See merge request robots/tiago_pro_head_robot!18
