@@ -1,11 +1,11 @@
-/play_motion2:
+/**:
   ros__parameters:
     motions:
       head_nod:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8, 1.6]
-        positions: [0.0, 0.0, 
-                    0.0, -0.4, 
+        positions: [0.0, 0.0,
+                    0.0, -0.4,
                     0.0, 0.0]
         meta:
           name: Head Nod
@@ -15,7 +15,7 @@
       head_down:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8]
-        positions: [0.0, 0.0, 
+        positions: [0.0, 0.0,
                     0.0, -0.4]
         meta:
           name: Head Down
@@ -34,12 +34,12 @@
       head_shake:
         joints: [head_1_joint, head_2_joint]
         times_from_start: [0.1, 0.8, 1.5, 2.2, 2.9, 3.6, 4.3]
-        positions: [0.0, 0.0, 
-                   -0.4, 0.0, 
+        positions: [0.0, 0.0,
+                   -0.4, 0.0,
                     0.0, 0.0,
-                    0.4, 0.0, 
-                    0.0, 0.0, 
-                   -0.4, 0.0, 
+                    0.4, 0.0,
+                    0.0, 0.0,
+                   -0.4, 0.0,
                     0.0, 0.0]
         meta:
           name: Head Shake
