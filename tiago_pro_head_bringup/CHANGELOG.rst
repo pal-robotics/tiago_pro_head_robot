@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.5.0 (2025-06-18)
+------------------
 * Adapt to changes in play_motion2
 * Fix inspect_surroundings motion
 * Contributors: Aina Irisarri, davidfernandez
