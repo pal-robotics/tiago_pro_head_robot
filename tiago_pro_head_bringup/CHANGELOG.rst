@@ -2,6 +2,12 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adapt to changes in play_motion2
+* Fix inspect_surroundings motion
+* Contributors: Aina Irisarri, davidfernandez
+
 1.4.2 (2025-03-25)
 ------------------
 * Merge branch 'mvi/update-motions' into 'humble-devel'
