@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* remove realsense overlay
+* Contributors: antoniobrandi
+
 1.5.0 (2025-06-18)
 ------------------
 
