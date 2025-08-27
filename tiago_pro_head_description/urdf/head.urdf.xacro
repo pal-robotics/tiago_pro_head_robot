@@ -16,8 +16,8 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
   <!--File includes-->
-  <xacro:include filename="$(find realsense2_description)/urdf/_d435.urdf.xacro" />
-  <xacro:include filename="$(find realsense2_description)/urdf/_d455.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d455.urdf.xacro" />
 
   <!-- Tools -->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
@@ -170,16 +170,16 @@
 
     <!-- Head camera:Intel D435 -->
     <xacro:if value="${camera_model == 'realsense-d435'}">
-      <xacro:sensor_d435 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
+      <xacro:realsense_d435 parent="${name}_2_link" name="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
         <origin xyz="0.0416 -0.1555 0" rpy="1.5708 0 0" />
-      </xacro:sensor_d435>
+      </xacro:realsense_d435>
     </xacro:if>
 
     <!-- Head camera:Intel D455 -->
     <xacro:if value="${camera_model == 'realsense-d455'}">
-      <xacro:sensor_d455 parent="${name}_2_link" name="${name}_front_camera" topics_ns="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
+      <xacro:realsense_d455 parent="${name}_2_link" name="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
         <origin xyz="0.040453 -0.1565 0" rpy="1.5708 0 0" />
-      </xacro:sensor_d455>
+      </xacro:realsense_d455>
     </xacro:if>
 
   </xacro:macro>

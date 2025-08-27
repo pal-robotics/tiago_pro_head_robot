@@ -14,7 +14,6 @@
   <exec_depend>xacro</exec_depend>
   <exec_depend>tiago_pro_head_controller_configuration</exec_depend>
   <exec_depend>realsense2_description</exec_depend>
-  <exec_depend>realsense_simulation</exec_depend>
   <exec_depend>pal_urdf_utils</exec_depend>
   <exec_depend>launch_param_builder</exec_depend>
 
