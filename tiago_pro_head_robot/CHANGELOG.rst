@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.6.1 (2025-10-17)
+------------------
 * Remove unused linters
 * Contributors: Noel Jimenez
 
