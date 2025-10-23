@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add play_motion2 cli dependency
+* Contributors: Isaac Acevedo
+
 1.6.1 (2025-10-17)
 ------------------
 
