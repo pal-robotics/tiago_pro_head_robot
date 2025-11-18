@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* new frame for wbc addedd
+* Contributors: michelacavuoto
+
 1.7.0 (2025-10-23)
 ------------------
 
