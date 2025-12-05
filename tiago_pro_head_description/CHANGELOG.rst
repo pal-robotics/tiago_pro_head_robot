@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add gazebo_version xacro argument
+* Contributors: Noel Jimenez
+
 1.7.1 (2025-11-18)
 ------------------
 * new frame for wbc addedd
