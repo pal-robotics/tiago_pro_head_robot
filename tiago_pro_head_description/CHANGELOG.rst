@@ -2,6 +2,12 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Unifying frames
+* adding depth frame for calibration
+* Contributors: silviamasiello
+
 1.8.0 (2025-12-05)
 ------------------
 * Add gazebo_version xacro argument
