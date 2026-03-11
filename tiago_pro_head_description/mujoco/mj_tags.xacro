@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="tiago_pro_head">
+
+    <xacro:macro name="mj_head_actuators">
+        <xacro:if value="${mj_control == 'position'}">
+            <position name="head_1_joint_position" joint="head_1_joint" ctrlrange="-1.309 1.309" kp="2000" />
+            <position name="head_2_joint_position" joint="head_2_joint" ctrlrange="-1.0472 0.34907" kp="2000"/>
+        </xacro:if>
+        <xacro:if value="${mj_control == 'motor'}">
+            <motor name="head_1_joint_motor" joint="head_1_joint" ctrllimited="true" ctrlrange="-5.197 5.197"/>
+            <motor name="head_2_joint_motor" joint="head_2_joint" ctrllimited="true" ctrlrange="-2.77 2.77"/>
+        </xacro:if>
+    </xacro:macro>
+
+</robot>

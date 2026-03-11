@@ -24,10 +24,25 @@
   <xacro:arg name="namespace" default=""/>
   <xacro:arg name="gazebo_version" default="classic"/>
 
+  <!-- mujoco-ros2-control, mujoco, gazebo, no-simulation -->
+  <xacro:arg name="sim_type" default="gazebo" />
+
+  <!-- false, position, motor -->
+  <xacro:arg name="mj_control" default="false" />
+
+  <xacro:arg name="world_name" default="floor" />
+
   <xacro:property name="camera_model" value="$(arg camera_model)" />
   <xacro:property name="use_sim_time" value="$(arg use_sim_time)" />
   <xacro:property name="is_public_sim" value="$(arg is_public_sim)" />
   <xacro:property name="namespace" value="$(arg namespace)" />
+
+  <!-- Mujoco properties -->
+  <xacro:property name="sim_type" value="$(arg sim_type)" /> 
+  <xacro:property name="mj_control" value="$(arg mj_control)"/>
+  <xacro:property name="world_name" value="$(arg world_name)"/>
+
+
   <xacro:property name="gazebo_version" value="$(arg gazebo_version)" />
 
     <!-- ROS 2 Control -->
@@ -77,5 +92,52 @@
   </link>
 
   <xacro:tiago_pro_head name="head" parent="head_base_link" use_sim_time="$(arg use_sim_time)" camera_model="$(arg camera_model)"/>
+
+
+  <xacro:if value="${sim_type in ['mujoco', 'mujoco-ros2-control']}">
+    <xacro:include filename="$(find tiago_pro_head_description)/mujoco/mj_tags.xacro" />
+    <xacro:include filename="$(find pal_mujoco_scenes)/scenes/${world_name}.xacro" />
+
+    <mujoco_inputs> 
+
+      <!-- Mujoco environment -->
+      <raw_inputs>
+      <!-- Actuator-->
+        <xacro:if value="${sim_type == 'mujoco'}">
+          <actuator>
+            <xacro:mj_head_actuators/>
+          </actuator>
+        </xacro:if>
+      </raw_inputs>
+
+      <processed_inputs>
+        <!-- Specifying decompose_mesh will set the `decompose` flag when using obj2mjcf -->
+        <!-- <decompose_mesh mesh_name="arm2_link" threshold="0.05"/>
+        <decompose_mesh mesh_name="arm3_link" threshold="0.05"/> -->
+        <!-- <decompose_mesh mesh_name="arm4_link" threshold="0.05"/> -->
+
+        <!-- The camera with the specified values will be added at the specified site name. -->
+        <!-- The position and quaterinion will be filled in by the converter -->
+        <!-- Realsense_d435 -->
+        <camera site="head_front_camera_color_eye_frame" name="head" fovy="42" mode="fixed" resolution="848 480"/>
+
+        <!-- Adds a lidar tag below a site tag to support a lidar sensor. -->
+        <!-- In the URDF, we assume that that the sensor frame has the Z-axis pointed directly up in the sensor -->
+        <!-- frame. This tag will create rangefinders in the MJCF between min_angle and max_angle at each -->
+        <!-- angle_increment rotated about the replicate frame's Y axis. The hardware intercface then combines -->
+        <!-- them into a single LaserScan message. -->
+        <!-- <lidar ref_site="torso_link" sensor_name="rf" min_angle="-0.3" max_angle="0.3" angle_increment="0.025" /> -->
+
+        <!-- The element with the type and name as listed below will be modified with the remaining attributes -->
+        <!-- If the attribute already existed, it will be overwritten -->
+        <!-- Note that the type and name elements are required -->
+        <!-- <modify_element type="joint" name="joint1" frictionloss="1.0" damping="2.0"/>
+        <modify_element type="body" name="forearm" gravcomp="1.0"/> -->
+
+      </processed_inputs>
+
+    </mujoco_inputs>  
+  </xacro:if>
+
 
 </robot>
