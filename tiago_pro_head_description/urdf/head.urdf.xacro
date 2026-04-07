@@ -17,25 +17,16 @@
 
   <xacro:macro name="tiago_pro_head" params="name parent camera_model use_sim_time:=^|false">
 
-  <!--File includes-->
-  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435.urdf.xacro" />
-  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435i.urdf.xacro" />
-  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d455.urdf.xacro" />
+    <!--File includes-->
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435.urdf.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435i.urdf.xacro" />
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d455.urdf.xacro" />
 
-  <!-- Tools -->
-  <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
-  <!--Constant parameters-->
-  <xacro:property name="head_friction" value="1.0" />
-  <xacro:property name="head_damping" value="0.5" />
-  <xacro:property name="head_max_vel" value="3.0" />
-  <xacro:property name="head_1_lower_limit" value="-1.309"/>
-  <xacro:property name="head_1_upper_limit" value="1.309"/>
-  <xacro:property name="head_2_lower_limit" value="-1.0472"/>
-  <xacro:property name="head_2_upper_limit" value="0.34907"/>
+     <!-- Tools -->
+    <xacro:property name="head_eps" value="${0.07}" />
 
-  <xacro:property name="head_eps" value="${0.07}" />
-
-  <xacro:macro name="tiago_pro_head" params="name parent camera_model use_sim_time:=^|false">
+    <xacro:include filename="$(find pal_urdf_utils)/urdf/deg_to_rad.urdf.xacro" />
+    <xacro:include filename="$(find tiago_pro_head_description)/urdf/head_limits.xacro" />
 
     <!-- Head Link 1-->
     <link name="${name}_1_link">
@@ -68,7 +59,7 @@
       <parent link="${parent}" />
       <child link="head_1_link" />
       <axis xyz="0 0 1" />
-      <limit lower="${head_1_lower_limit}" upper="${head_1_upper_limit}" effort="5.197" velocity="${head_max_vel}" />
+      <limit lower="${head_1_lower_limit}" upper="${head_1_upper_limit}" effort="${head_1_max_effort}" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
       <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${head_1_lower_limit + head_eps}" soft_upper_limit="${head_1_upper_limit - head_eps}" />
     </joint>
@@ -113,7 +104,7 @@
       <parent link="${name}_1_link" />
       <child link="${name}_2_link" />
       <axis xyz="0 0 -1" />
-      <limit lower="${head_2_lower_limit}" upper="${head_2_upper_limit}" effort="2.77" velocity="${head_max_vel}" />
+      <limit lower="${head_2_lower_limit}" upper="${head_2_upper_limit}" effort="${head_2_max_effort}" velocity="${head_max_vel}" />
       <dynamics damping="${head_damping}" friction="${head_friction}"/>
       <safety_controller k_position="20" k_velocity="20" soft_lower_limit="${head_2_lower_limit + head_eps}" soft_upper_limit="${head_2_upper_limit - head_eps}" />
     </joint>
