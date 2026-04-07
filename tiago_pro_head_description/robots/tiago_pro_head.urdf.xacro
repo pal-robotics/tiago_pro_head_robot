@@ -44,8 +44,10 @@
   <xacro:property name="gazebo_version" value="$(arg gazebo_version)" />
 
   <!-- ROS 2 Control -->
-  <xacro:include filename="$(find tiago_pro_head_description)/ros2_control/ros2_control.urdf.xacro" />
-  <xacro:tiago_pro_head_ros2_control use_sim_time="${use_sim_time}" sim_type="${sim_type}"/>
+  <xacro:if value="${sim_type != 'mujoco'}">
+    <xacro:include filename="$(find tiago_pro_head_description)/ros2_control/ros2_control.urdf.xacro" />
+    <xacro:tiago_pro_head_ros2_control use_sim_time="${use_sim_time}" sim_type="${sim_type}"/>
+  </xacro:if>
 
   <link name="world"/>
 
