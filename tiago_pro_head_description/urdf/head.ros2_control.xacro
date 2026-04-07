@@ -30,10 +30,8 @@
       <state_interface name="effort" />
     </joint>
 
-    <xacro:if value="${sim_type != 'mujoco-ros2-control'}">
-      <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.transmission.urdf.xacro" />
-      <xacro:head_transmission name="${name}" reduction="1" offset_value="${offset_value}" />
-    </xacro:if>
+    <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.transmission.urdf.xacro" />
+    <xacro:head_transmission name="${name}" reduction="1" offset_value="${offset_value}" sim_type="${sim_type}"/>
 
   </xacro:macro>
 </robot>
