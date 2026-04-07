@@ -187,7 +187,7 @@
 
   </xacro:macro>
 
-  <xacro:macro name="tiago_pro_head_mj" params="mj_control world">
+  <xacro:macro name="tiago_pro_head_mj" params="mj_control world_name">
     <xacro:include filename="$(find tiago_pro_head_description)/mujoco/mj_tags.xacro" />
     <xacro:include filename="$(find pal_mujoco_scenes)/scenes/${world_name}.xacro" />
 
