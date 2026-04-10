@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.9.1 (2026-04-10)
+------------------
 * Fixing open loop param
 * Contributors: vivianamorlando
 
