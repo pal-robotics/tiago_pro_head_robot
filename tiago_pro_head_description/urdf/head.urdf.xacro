@@ -127,20 +127,22 @@
       </visual>
     </link>
 
-    <gazebo reference="${name}_screen_link">
-      <visual>
-        <plugin name="${name}_video_stream" filename="libgazebo_ros_video.so">
-          <ros>
-            <!-- Add a namespace -->
-            <namespace></namespace>
-            <!-- remap image subscribe topic -->
-            <remapping>~/image_raw:=robot_face/image_raw</remapping>
-          </ros>
-          <height>480</height>
-          <width>640</width>
-        </plugin>
-      </visual>
-    </gazebo>
+    <xacro:if value="${gazebo_version == 'classic'}">
+      <gazebo reference="${name}_screen_link">
+        <visual>
+          <plugin name="${name}_video_stream" filename="libgazebo_ros_video.so">
+            <ros>
+              <!-- Add a namespace -->
+              <namespace></namespace>
+              <!-- remap image subscribe topic -->
+              <remapping>~/image_raw:=robot_face/image_raw</remapping>
+            </ros>
+            <height>480</height>
+            <width>640</width>
+          </plugin>
+        </visual>
+      </gazebo>
+    </xacro:if>
 
     <joint name="${name}_screen_joint" type="fixed">
       <parent link="${name}_2_link" />
