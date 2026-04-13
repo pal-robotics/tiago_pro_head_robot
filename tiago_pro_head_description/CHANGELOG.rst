@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add gazebo ignition for TIAGo Pro Head
+* Contributors: thomas.peyrucain
+
 1.9.1 (2026-04-10)
 ------------------
 
