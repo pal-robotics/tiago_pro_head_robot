@@ -43,6 +43,15 @@
 
   <xacro:property name="gazebo_version" value="$(arg gazebo_version)" />
 
+  <!-- Properties check -->
+  <xacro:if value="${sim_type not in ['mujoco-ros2-control', 'mujoco', 'gazebo']}">
+    <xacro:wrong_sim_type />
+  </xacro:if>
+  <xacro:unless value="$(arg use_sim_time)">
+    <xacro:property name="sim_type" value="gazebo" />
+  </xacro:unless>
+
+
   <!-- ROS 2 Control -->
   <xacro:if value="${sim_type != 'mujoco'}">
     <xacro:include filename="$(find tiago_pro_head_description)/ros2_control/ros2_control.urdf.xacro" />
