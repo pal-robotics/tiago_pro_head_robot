@@ -9,8 +9,8 @@
             <position name="head_2_joint_position" joint="head_2_joint" ctrlrange="${head_2_lower_limit} ${head_2_upper_limit}" kp="2000"/>
         </xacro:if>
         <xacro:if value="${mj_control == 'motor'}">
-            <motor name="head_1_joint_motor" joint="head_1_joint" ctrllimited="true" ctrlrange="-5.197 5.197"/>
-            <motor name="head_2_joint_motor" joint="head_2_joint" ctrllimited="true" ctrlrange="-2.77 2.77"/>
+            <motor name="head_1_joint_motor" joint="head_1_joint" ctrllimited="true" ctrlrange="-{head_1_max_effort} {head_1_max_effort}"/>
+            <motor name="head_2_joint_motor" joint="head_2_joint" ctrllimited="true" ctrlrange="-{head_2_max_effort} {head_2_max_effort}"/>
         </xacro:if>
     </xacro:macro>
 
