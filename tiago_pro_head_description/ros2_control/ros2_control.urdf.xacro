@@ -16,7 +16,7 @@
  -->
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="tiago_pro_head" >
 
-  <xacro:macro name="tiago_pro_head_ros2_control" params="use_sim_time:=^|false">
+  <xacro:macro name="tiago_pro_head_ros2_control" params="use_sim_time:=^|false sim_type:=^|gazebo">
 
     <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.ros2_control.xacro" />
 
