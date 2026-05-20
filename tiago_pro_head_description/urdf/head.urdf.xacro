@@ -17,6 +17,7 @@
 
   <!--File includes-->
   <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435.urdf.xacro" />
+  <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d435i.urdf.xacro" />
   <xacro:include filename="$(find pal_urdf_utils)/urdf/camera/realsense_d455.urdf.xacro" />
 
   <!-- Tools -->
