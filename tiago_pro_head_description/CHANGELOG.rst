@@ -2,6 +2,12 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update head.urdf.xacro
+* Added urdf parent also for camera d435i
+* Contributors: ileniaperrella, martinaannicelli
+
 1.10.0 (2026-04-13)
 -------------------
 * Add gazebo ignition for TIAGo Pro Head
