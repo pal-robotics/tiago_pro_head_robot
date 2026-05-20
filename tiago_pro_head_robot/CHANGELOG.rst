@@ -2,6 +2,9 @@
 Changelog for package tiago_pro_head_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.10.1 (2026-05-20)
 -------------------
 

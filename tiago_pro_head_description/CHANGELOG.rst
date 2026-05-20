@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added d435i option
+* Contributors: martinaannicelli
+
 1.10.1 (2026-05-20)
 -------------------
 * Update head.urdf.xacro
