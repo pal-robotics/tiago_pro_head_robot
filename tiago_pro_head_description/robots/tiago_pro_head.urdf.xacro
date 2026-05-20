@@ -18,7 +18,7 @@
 <robot xmlns:xacro="http://ros.org/wiki/xacro" name="tiago_pro_head">
   <xacro:include filename="$(find tiago_pro_head_description)/urdf/head.urdf.xacro" />
 
-  <xacro:arg name="camera_model" default="realsense-d435"/>
+  <xacro:arg name="camera_model" default="realsense-d435i"/>
   <xacro:arg name="use_sim_time" default="false"/>
   <xacro:arg name="is_public_sim" default="false"/>
   <xacro:arg name="namespace" default=""/>
