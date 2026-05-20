@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.10.1 (2026-05-20)
+-------------------
 * Update head.urdf.xacro
 * Added urdf parent also for camera d435i
 * Contributors: ileniaperrella, martinaannicelli
