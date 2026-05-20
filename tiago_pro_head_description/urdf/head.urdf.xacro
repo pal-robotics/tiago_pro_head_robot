@@ -171,6 +171,13 @@
 
     <!-- Cameras-->
 
+    <!-- Head camera:Intel D435i -->
+    <xacro:if value="${camera_model == 'realsense-d435i'}">
+      <xacro:realsense_d435i parent="${name}_2_link" name="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
+        <origin xyz="0.0416 -0.1555 0" rpy="1.5708 0 0" />
+      </xacro:realsense_d435i>
+    </xacro:if>
+
     <!-- Head camera:Intel D435 -->
     <xacro:if value="${camera_model == 'realsense-d435'}">
       <xacro:realsense_d435 parent="${name}_2_link" name="${name}_front_camera" use_nominal_extrinsics="${use_sim_time}">
