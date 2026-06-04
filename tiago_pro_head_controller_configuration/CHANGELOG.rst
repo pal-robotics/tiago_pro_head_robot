@@ -2,6 +2,9 @@
 Changelog for package tiago_pro_head_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.11.0 (2026-05-20)
 -------------------
 

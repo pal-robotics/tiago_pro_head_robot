@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* added mujoco args
+* Contributors: Ortisa Poci
+
 1.11.0 (2026-05-20)
 -------------------
 
