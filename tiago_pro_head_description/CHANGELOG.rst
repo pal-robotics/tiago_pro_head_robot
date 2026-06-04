@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.12.0 (2026-06-04)
+-------------------
 * comment camera for head ros2 control mj simulation
 * fix argument
 * add check for the values of the sim_type argument
