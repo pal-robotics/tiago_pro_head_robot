@@ -1,3 +1,12 @@
+from dataclasses import dataclass
+import os
+
+from ament_index_python.packages import get_package_share_directory
+from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch_pal.arg_utils import LaunchArgumentsBase
+from launch_pal.include_utils import include_scoped_launch_py_description
+from launch_pal.robot_arguments import CommonArgs
 # Copyright (c) 2024 PAL Robotics S.L. All rights reserved.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,17 +21,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import rclpy
-
-from ament_index_python.packages import get_package_share_directory
-from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument
-
-from launch_pal.include_utils import include_scoped_launch_py_description
-from launch_pal.arg_utils import LaunchArgumentsBase
-from launch_pal.robot_arguments import CommonArgs
-
-from dataclasses import dataclass
-import os
 
 
 @dataclass(frozen=True)
@@ -41,8 +39,8 @@ def declare_actions(launch_description: LaunchDescription, launch_args: LaunchAr
         pkg_name='play_motion2',
         paths=['launch', 'play_motion2.launch.py'],
         launch_arguments={
-            "use_sim_time":  launch_args.use_sim_time,
-            "motions_file": os.path.join(motions_folder, 'head_motions.yaml'),
+            'use_sim_time':  launch_args.use_sim_time,
+            'motions_file': os.path.join(motions_folder, 'head_motions.yaml'),
             'motion_planner_config': os.path.join(planner_motions_folder, 'motion_planner.yaml')
         })
 

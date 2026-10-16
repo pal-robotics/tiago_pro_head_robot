@@ -12,15 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from dataclasses import dataclass
 import os
+
 from ament_index_python.packages import get_package_share_directory
+from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
-from controller_manager.launch_utils import generate_load_controller_launch_description
 from launch_pal.arg_utils import LaunchArgumentsBase
 from launch_pal.robot_arguments import CommonArgs
-
-from dataclasses import dataclass
 
 
 @dataclass(frozen=True)

@@ -12,22 +12,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from dataclasses import dataclass
 import os
 from pathlib import Path
 
 from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
-from launch.substitutions import LaunchConfiguration
 from launch.actions import DeclareLaunchArgument, OpaqueFunction, SetLaunchConfiguration
-from launch_ros.actions import Node
-from launch_param_builder import load_xacro
-
+from launch.substitutions import LaunchConfiguration
 from launch_pal.arg_utils import LaunchArgumentsBase, read_launch_argument
 from launch_pal.robot_arguments import CommonArgs
-from tiago_pro_head_description.launch_arguments import TiagoProHeadArgs
+from launch_param_builder import load_xacro
+from launch_ros.actions import Node
 
-from dataclasses import dataclass
+from tiago_pro_head_description.launch_arguments import TiagoProHeadArgs
 
 
 @dataclass(frozen=True)
