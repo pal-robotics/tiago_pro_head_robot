@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.12.1 (2026-10-23)
+-------------------
 * Bump cmake_minimum_required to 3.10
 * Fix flake8 tests
 * Contributors: Aina
