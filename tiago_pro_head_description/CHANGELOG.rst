@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add kv term in mujoco position actuators
+* Contributors: Ortisa Poci
+
 1.12.1 (2026-10-23)
 -------------------
 * Bump cmake_minimum_required to 3.10
