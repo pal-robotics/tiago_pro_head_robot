@@ -2,8 +2,8 @@
 Changelog for package tiago_pro_head_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.12.2 (2026-11-17)
+-------------------
 * add kv term in mujoco position actuators
 * Contributors: Ortisa Poci
 
